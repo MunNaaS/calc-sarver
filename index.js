@@ -1,3 +1,5 @@
 module.exports = (req, res) => {
-  res.end('Welcome to Micro')
+  res.json({
+    hello:'world'
+  })
 }
