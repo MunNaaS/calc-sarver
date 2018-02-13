@@ -1,0 +1,24 @@
+{
+  "name": "calc-sarver",
+  "version": "1.0.0",
+  "description": "calc-sarver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MunNaaS/calc-sarver.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MunNaaS/calc-sarver/issues"
+  },
+  "homepage": "https://github.com/MunNaaS/calc-sarver#readme",
+  "dependencies": {
+    "dropbox": "^3.0.4",
+    "micro": "^9.1.0"
+  }
+}
