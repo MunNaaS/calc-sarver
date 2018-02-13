@@ -4,11 +4,16 @@
   "description": "calc-sarver",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && npm run lint",
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www",
+    "test": "npm run lint && mocha test/",
+    "start": "NODE_ENV=production node ./bin/www",
+    "dev": "NODE_ENV=development nodemon ./bin/www",
     "lint": "standard",
     "fix": "standard --fix"
+  },
+  "standard": {
+    "ignore": [
+      "test/**"
+    ]
   },
   "repository": {
     "type": "git",
@@ -29,7 +34,12 @@
     "serve-favicon": "~2.4.5"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^5.0.0",
     "nodemon": "^1.14.12",
-    "standard": "^10.0.3"
+    "require-dir": "^1.0.0",
+    "standard": "^10.0.3",
+    "supertest": "^3.0.0"
   }
 }
