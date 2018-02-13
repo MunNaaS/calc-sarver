@@ -4,8 +4,11 @@
   "description": "calc-sarver",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && npm run lint",
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "lint": "standard",
+    "fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -22,8 +25,11 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
-    "jade": "~1.11.0",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12",
+    "standard": "^10.0.3"
   }
 }
