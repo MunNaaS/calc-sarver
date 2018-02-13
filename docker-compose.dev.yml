@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: 'postgres:10-alpine'
+    volumes:
+      - './.database/postgresql/data:/var/lib/postgresql/data'
+  nginx:
+    image: 'nginx:1-alpine'
+    volumes:
+      - './.nginx/conf.d:/etc/nginx/conf.d:ro'
+    ports:
+      - '8080:80'
+    links:
+      - 'node_app:node_app'
+  node_app:
+    image: 'node:alpine'
+    working_dir: /app
+    volumes:
+      - './:/app'
+    links:
+      - 'db:db'
+    command: yarn dev
